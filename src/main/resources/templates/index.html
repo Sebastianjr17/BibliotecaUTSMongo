@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html">
+	<title>Biblioteca UTS</title>
+	<link rel="icon"
+		href="https://static.vecteezy.com/system/resources/previews/006/952/251/non_2x/book-read-library-study-solid-line-icon-illustration-logo-template-suitable-for-many-purposes-vector.jpg"
+		type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+	<style>
+		body {
+			font-family: 'Libre Baskerville', serif;
+			background-image: url('https://virtualbackgrounds.site/wp-content/uploads/2020/09/old-library.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-color: #f8f9fa;
+			color: #343a40;
+		}
+
+		.container {
+			max-width: 800px;
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 20px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			margin: auto;
+			margin-top: 5%;
+		}
+
+		h2 {
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+
+		.btn-block {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 60px;
+			font-size: 1.2rem;
+			margin-bottom: 15px;
+			border-radius: 10px;
+		}
+
+		.btn-outline-primary,
+		.btn-outline-success {
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		.btn-outline-primary:hover {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+		.btn-outline-success:hover {
+			background-color: #28a745;
+			color: #fff;
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		.img-fluid {
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+		}
+
+		@media (max-width: 576px) {
+			.btn-block {
+				width: 100%;
+				font-size: 1rem;
+				height: 50px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container p-4">
+		<center>
+			<img src="https://static.vecteezy.com/system/resources/previews/006/952/251/non_2x/book-read-library-study-solid-line-icon-illustration-logo-template-suitable-for-many-purposes-vector.jpg"
+				alt="Biblioteca Logo" class="img-fluid" style="max-width: 150px;">
+			<br><br>
+			<h2>Biblioteca UTS</h2>
+		</center>
+		<div class="d-flex flex-column flex-md-row justify-content-center">
+			<div class="p-3">
+				<a th:href="@{/mostrarAdmin}" class="btn btn-outline-primary btn-lg btn-block">Administradores</a>
+			</div>
+			<div class="p-3">
+				<a th:href="@{/usuarios}" class="btn btn-outline-primary btn-lg btn-block">Usuarios</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

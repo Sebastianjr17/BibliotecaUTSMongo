@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html">
+	<title>Administrar Usuarios</title>
+	<link rel="icon"
+			href="https://static.vecteezy.com/system/resources/previews/006/952/251/non_2x/book-read-library-study-solid-line-icon-illustration-logo-template-suitable-for-many-purposes-vector.jpg"
+			type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-image: url('https://virtualbackgrounds.site/wp-content/uploads/2020/09/old-library.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-color: #f8f9fa;
+			color: #343a40;
+			padding-top: 20px;
+		}
+
+		.container {
+			max-width: 800px;
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			margin: auto;
+			margin-top: 5%;
+		}
+
+		h2 {
+			font-weight: 500;
+			margin-bottom: 30px;
+		}
+
+		.table {
+			background-color: white;
+		}
+
+		.table th,
+		.table td {
+			border-top: none;
+		}
+
+		.table thead th {
+			background-color: #e9ecef;
+		}
+
+		.table tbody tr:hover {
+			background-color: #f1f1f1;
+		}
+
+		.btn-outline-primary,
+		.btn-outline-info {
+			transition: background-color 0.3s ease, color 0.3s ease;
+			border-radius: 50px;
+		}
+
+		.btn-outline-primary:hover {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+		.btn-outline-info:hover {
+			background-color: #28a745;
+			color: #fff;
+		}
+
+		.btn-group {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: center;
+		}
+
+		.btn-group a {
+			flex: 1;
+			text-align: center;
+		}
+
+		@media (max-width: 576px) {
+			.btn-group a {
+				flex: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container p-4">
+		<center>
+			<h2>Administrar Usuarios</h2>
+		</center>
+		<br>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Email</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario: ${listarUsuarios}">
+					<td th:text="${usuario.nombre}"></td>
+					<td th:text="${usuario.email}"></td>
+					<td>
+						<a class="btn btn-warning btn-sm" th:href="@{'/user/editar' + '/' + ${usuario.id}}">Editar</a>
+						&nbsp;
+						<a class="btn btn-danger btn-sm"
+							th:href="@{'/usuario/eliminar' + '/' + ${usuario.id}}">Eliminar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<div class="btn-group">
+			<a th:href="@{/mostrarUsers/formUsers}" class="btn btn-outline-primary">Insertar Usuario</a>
+			<a href="#" onclick="history.back()" class="btn btn-outline-success">Regresar</a>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

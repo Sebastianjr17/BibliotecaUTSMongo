@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insertar Administrador</title>
+	<link rel="icon"
+		href="https://static.vecteezy.com/system/resources/previews/006/952/251/non_2x/book-read-library-study-solid-line-icon-illustration-logo-template-suitable-for-many-purposes-vector.jpg"
+		type="image/x-icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-image: url('https://virtualbackgrounds.site/wp-content/uploads/2020/09/old-library.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			color: #343a40;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+		}
+
+		main {
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			width: 100%;
+			max-width: 600px;
+		}
+
+		h1,
+		h2 {
+			font-weight: 500;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			margin-top: 20px;
+			margin-bottom: 15px;
+		}
+
+		.form-control:focus {
+			box-shadow: none;
+			border-color: #007bff;
+		}
+
+		.btn-outline-dark,
+		.btn-dark {
+			border-radius: 50px;
+		}
+
+		.d-flex.mb-3 {
+			gap: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<main class="d-flex justify-content-center flex-column align-items-center p-3 m-3">
+		<form th:action="@{/guardarAdmin}" th:object="${admin}" method="post"
+			class="d-flex flex-column p-4 g-3 needs-validation m-3">
+
+			<input type="hidden" th:if="${admin.id != null}" th:field="*{id}" th:value="${admin.id}" />
+			<h1>Insertar Administrador</h1>
+
+
+			<div class="mb-3">
+				<label for="nombre" class="form-label">Nombre:</label>
+				<input type="text" class="form-control" id="nombre" name="nombre" th:field="*{nombre}"
+					th:errorclass="'form-control alert-danger'" required />
+				<small class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}"
+					th:errors="*{nombre}"></small>
+			</div>
+			<div class="mb-3">
+				<label for="email" class="form-label">Email:</label>
+				<input type="email" class="form-control" id="email" name="email" th:field="*{email}"
+					th:errorclass="'form-control alert-danger'" required />
+				<small class="form-text text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+			</div>
+
+			<div class="d-flex mb-3">
+				<input type="submit" class="form-control btn btn-outline-dark me-2" value="Enviar">
+				<input type="reset" class="form-control btn btn-dark" value="Restablecer">
+				<a href="#" onclick="history.back()" class="btn btn-outline-success">Regresar</a>
+			</div>
+		</form>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgY4fvoT0Y/5HU5P64l2ja7v0v1arSRJv1MXmVnE"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
