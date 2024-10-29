@@ -1,0 +1,15 @@
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\BibliotecaUtsApplication.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\controller\adminController.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\controller\indexController.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\controller\libroController.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\controller\solicitudController.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\controller\userController.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\controller\usuarioController.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\entity\Admin.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\entity\Libro.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\entity\Solicitud.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\entity\User.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\repository\adminCrud.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\repository\libroCrud.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\repository\solicitudCrud.java
+D:\Spring Trabajos\BibliotecaUTS\src\main\java\com\example\biblioteca\app\repository\userCrud.java
